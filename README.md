@@ -1,5 +1,7 @@
 # Description for Lab Test
 
+## Gabriella Hon
+
 This code takes as input a data file with the weight and height of individuals and computes the body mass index (BMI). The BMI of a person is the weight of a person in kilograms divided by the square of the height in metres. The program should then categorise the BMI according to these rules
 * Less than 19: A
 * Not less than 19 but less than 25: B
