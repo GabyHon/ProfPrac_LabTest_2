@@ -1,0 +1,5 @@
+# Testing close to the categories
+LowTest 5 0 0 5 6
+MidRange1 6 0 0 5 9
+MidRange2 7 10 0 5 5
+HighTest 9 5 0 5 2

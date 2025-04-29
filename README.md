@@ -1,6 +1,6 @@
 # Description for Lab Test
 
-## Gabriella Hon
+## Gabriella Hon 2427395 Lab Test 2
 
 This code takes as input a data file with the weight and height of individuals and computes the body mass index (BMI). The BMI of a person is the weight of a person in kilograms divided by the square of the height in metres. The program should then categorise the BMI according to these rules
 * Less than 19: A
@@ -26,9 +26,12 @@ Assume the following conversion:
 
 # How to build and test
 
+The `make test` runs an integration test which uses an input and output file while the `make test_unit` runs the unit tests in the file `bmi.cpp` which test the categories, height conversion, and weight conversion functions.
+
 ```
 make
 make test
+make test_unit
 ```
 
 # How the program should be run
