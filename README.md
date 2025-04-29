@@ -26,7 +26,7 @@ Assume the following conversion:
 
 # How to build and test
 
-The `make test` runs an integration test which uses an input and output file while the `make test_unit` runs the unit tests in the file `bmi.cpp` which .
+The `make test` runs an integration test which uses an input and output file while the `make test_unit` runs the unit tests in the file `bmi.cpp` which test the categories, height conversion, and weight conversion functions.
 
 ```
 make
