@@ -6,6 +6,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
@@ -71,10 +72,77 @@ void process_data(char* input_file, char* output_file)
     f_out.close();
 }
 
+// Function to compare two floating point numbers approximately
+bool approximatelyEqual(double a, double b, double epsilon = 0.01)
+{
+	return fabs(a-b) < epsilon;
+}
+
+// Unit test for weight2kg
+void test_weight2kg()
+{
+	// 1 stone which should convert to kg
+	double result = weight2kg(1, 0, 0);
+	if(approximatelyEqual(result, 14.0/2.2))
+	 {
+		cout << "PASS: weight2kg(1, 0, 0)" << endl;
+	 }
+	else
+	 {
+		cout << "FAIL: weight2kg(1, 0, 0)" << endl;
+	 }
+}
+
+// Unit test for height2meters
+void test_height2metres()
+{
+	// should convert to meters, 1 foot
+	double result = height2metres(1, 0);
+	if(approximatelyEqual(result, 1.0/3.28))
+	 {
+		cout << "PASS: height2metres(1, 0)" << endl;
+	 }
+	else
+	 {
+		cout << "FAIL: height2metres(1, 0)" << endl;
+	 }
+}
+
+// Unit test for categories
+void test_categories()
+{
+	// Normal range test such as BMI of 25 should be B
+	// weight is 70kg and height is 1.75m
+	char result = categorise(70.0, 1.75);
+	if(result == 'B')
+	 {
+		cout << "PASS: categorise(70, 1.75" << endl;
+	 }
+	else
+	 {
+		cout << "FAIL: categorise(70, 1.75" << endl;
+	 }
+}
+
+// Function to run the unit tests
+void run_unit_tests()
+{
+	test_weight2kg();
+	test_height2metres();
+	test_categories();
+}
+
 int main(int argc, char *argv[])
 {
+    if(argc == 2 && string(argv[1]) == "test")
+	{
+	  // Run the tests when 'test' is passed as a argument
+	  run_unit_tests();
+	  return 0;
+	}
+
     // Checking if 3 arguments are supplied, otherwise output error message
-    if(artgc != 3)
+    if(argc != 3)
 	{
 	   cerr << argv[0] << "<input_file> <output_file>" << endl;
 	   return 1;

@@ -8,5 +8,9 @@ test: bmi
 	./bmi study.dat cats.txt
 	cat cats.txt
 
+# This is to run the unit tests in bmi.cpp
+test_unit: bmi
+	./bmi test
+
 clean:
 	rm bmi study.dat cats.txt
