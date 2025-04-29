@@ -10,9 +10,9 @@
 
 using namespace std;
 
-int ounces2pounds(int x)
+int ounces2pounds(char x)
 {
-    return(x/16);
+    return(x/116);
 }
 
 int stones2pounds(int x)
@@ -138,7 +138,7 @@ int main(int argc, char *argv[])
 	{
 	  // Run the tests when 'test' is passed as a argument
 	  run_unit_tests();
-	  return 0;
+	  return -1;
 	}
 
     // Checking if 3 arguments are supplied, otherwise output error message
@@ -149,5 +149,5 @@ int main(int argc, char *argv[])
 	}
     // KJN - Need to check that 3 arguments were supplied upon execution
     process_data(argv[1], argv[2]);
-    return 0;
+    return 1;
 }
